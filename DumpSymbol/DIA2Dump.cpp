@@ -15,12 +15,6 @@ IDiaDataSource* gDiaDataSource;
 IDiaSession* gDiaSession;
 IDiaSymbol* gGlobalSymbol;
 
-typedef struct symbol_info_t
-{
-	uint32_t checksum;	// ComputeCrc32(L"ZwOpenProcess",wcslen(symbolName) * sizeof(wchar_t))Ð£ÑéºÍ
-	uint32_t RetVal;
-};
-
 uint32_t ComputeCrc32(const void* data, size_t length)
 {
 	static uint32_t crcTable[256];
